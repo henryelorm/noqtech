@@ -8,7 +8,8 @@ import '@/styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 
-const SITE_URL = 'https://henryelorm.github.io/noqtech/';
+// Set per host in next.config.ts (GitHub Pages or Vercel production URL)
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://henryelorm.github.io/noqtech/';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
