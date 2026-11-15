@@ -1,8 +1,19 @@
 # noqtech
-Official NoqTech site — https://henryelorm.github.io/noqtech/
+Official NoqTech site
 
-Next.js (App Router) + TypeScript + Tailwind CSS, exported as static HTML and deployed to
-GitHub Pages by `.github/workflows/static.yml` on every push to `main`.
+- Vercel: https://noqtech.vercel.app
+- GitHub Pages: https://henryelorm.github.io/noqtech/
+
+Next.js (App Router) + TypeScript + Tailwind CSS, exported as static HTML.
+
+## Deploy
+
+- **GitHub Pages** deploys automatically on every push to `main` (`.github/workflows/static.yml`).
+- **Vercel** currently deploys from the CLI: `npx vercel --prod` (needs `npx vercel login` once).
+  For automatic deploys on push, the repo owner must grant the Vercel GitHub app access to this
+  repo, then run `npx vercel git connect`.
+
+The build detects Vercel and serves from the domain root; GitHub Pages builds use `/noqtech`.
 
 ## Develop
 
