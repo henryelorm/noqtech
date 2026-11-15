@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 import { ButtonLink } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Section';
 
-/** Closing call-to-action band — dark (Services) or indigo (About) per the Stitch pages. */
+/** Closing call-to-action band — dark (Services) or brand deep blue (About, Our Work). */
 export function CTABanner({
   eyebrow,
   title,
@@ -44,12 +44,8 @@ export function CTABanner({
               </p>
             </div>
             <div className="flex flex-col gap-3 lg:col-span-4 lg:items-end">
-              <ButtonLink
-                href={COMPANY.briefFormUrl}
-                size="lg"
-                variant={tone === 'dark' ? 'primary' : 'light'}
-                className="w-full lg:w-64"
-              >
+              {/* White on both tones: a deep-blue button would only reach ~1.4:1 against the dark band */}
+              <ButtonLink href={COMPANY.briefFormUrl} size="lg" variant="light" className="w-full lg:w-64">
                 Start a Project <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </ButtonLink>
               <ButtonLink

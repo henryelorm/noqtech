@@ -18,10 +18,10 @@
   --color-body: #555b6e;
   --color-muted: #8e95a5;
 
-  /* Brand */
-  --color-brand: #5146e5;
-  --color-brand-hover: #4338ca;
-  --color-brand-active: #3730a3;
+  /* Brand — deep blue from the open-door logo (public/logo.svg) */
+  --color-brand: #2a2580;
+  --color-brand-hover: #211d6b;
+  --color-brand-active: #191656;
   --color-brand-accent: #dcd9ff;
   --color-brand-subtle: #eeedfe;
 
