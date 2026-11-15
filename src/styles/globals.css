@@ -1,0 +1,124 @@
+@import 'tailwindcss';
+
+/*
+ * NoqTech design tokens — sourced from the Stitch "Noqtech Portfolio website" design theme
+ * and the Frontend Architecture & Component Handoff (section 1).
+ */
+@theme {
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  /* Surfaces */
+  --color-surface: #ffffff;
+  --color-surface-2: #f7f8fc;
+  --color-surface-3: #f1f3f9;
+
+  /* Text */
+  --color-ink: #151722;
+  --color-body: #555b6e;
+  --color-muted: #8e95a5;
+
+  /* Brand */
+  --color-brand: #5146e5;
+  --color-brand-hover: #4338ca;
+  --color-brand-active: #3730a3;
+  --color-brand-accent: #dcd9ff;
+  --color-brand-subtle: #eeedfe;
+
+  /* Borders */
+  --color-line: #e8eaf0;
+  --color-line-strong: #d5d8e2;
+
+  /* Status */
+  --color-live-bg: #ecfdf5;
+  --color-live-text: #059669;
+  --color-live-border: #a7f3d0;
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Shadows */
+  --shadow-subtle: 0 1px 3px rgba(21, 23, 34, 0.04), 0 1px 2px rgba(21, 23, 34, 0.02);
+  --shadow-card: 0 4px 14px rgba(21, 23, 34, 0.05), 0 1px 3px rgba(21, 23, 34, 0.03);
+  --shadow-dropdown: 0 10px 25px -5px rgba(21, 23, 34, 0.08), 0 8px 10px -6px rgba(21, 23, 34, 0.04);
+
+  /* Type scale (desktop / mobile pairs from the Stitch theme) */
+  --text-display: 4.5rem;
+  --text-display--line-height: 1.08;
+  --text-display--letter-spacing: -0.03em;
+  --text-display--font-weight: 700;
+  --text-display-sm: 2.5rem;
+  --text-display-sm--line-height: 1.12;
+  --text-display-sm--letter-spacing: -0.025em;
+  --text-display-sm--font-weight: 700;
+
+  --text-h1: 3.25rem;
+  --text-h1--line-height: 1.15;
+  --text-h1--letter-spacing: -0.025em;
+  --text-h1--font-weight: 600;
+  --text-h1-sm: 2rem;
+  --text-h1-sm--line-height: 1.2;
+  --text-h1-sm--letter-spacing: -0.02em;
+  --text-h1-sm--font-weight: 600;
+
+  --text-h2: 2.375rem;
+  --text-h2--line-height: 1.2;
+  --text-h2--letter-spacing: -0.02em;
+  --text-h2--font-weight: 600;
+  --text-h2-sm: 1.625rem;
+  --text-h2-sm--line-height: 1.25;
+  --text-h2-sm--letter-spacing: -0.015em;
+  --text-h2-sm--font-weight: 600;
+
+  --text-h3: 1.625rem;
+  --text-h3--line-height: 1.3;
+  --text-h3--letter-spacing: -0.015em;
+  --text-h3--font-weight: 600;
+
+  --text-body-lg: 1.1875rem;
+  --text-body-lg--line-height: 1.6;
+  --text-body-lg--letter-spacing: -0.01em;
+
+  --text-label: 0.6875rem;
+  --text-label--line-height: 1.4;
+  --text-label--letter-spacing: 0.08em;
+  --text-label--font-weight: 600;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-surface font-sans text-body antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    @apply bg-brand-accent text-ink;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+  /* Offset in-page anchors so the fixed header does not cover them */
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
