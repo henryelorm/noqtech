@@ -39,6 +39,7 @@ const organizationJsonLd = {
   '@type': 'Organization',
   name: COMPANY.legalName,
   url: SITE_URL,
+  logo: `${SITE_URL}logo.svg`,
   email: COMPANY.email,
   description: COMPANY.description,
 };

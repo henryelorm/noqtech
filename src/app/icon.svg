@@ -1,7 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#5146E5"/>
-  <g stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M23 12.5v7a1.75 1.75 0 0 1-.88 1.52l-5.25 3a1.75 1.75 0 0 1-1.74 0l-5.25-3A1.75 1.75 0 0 1 9 19.5v-7a1.75 1.75 0 0 1 .88-1.52l5.25-3a1.75 1.75 0 0 1 1.74 0l5.25 3A1.75 1.75 0 0 1 23 12.5Z"/>
-    <path d="M9.26 11.6 16 15.5l6.74-3.9M16 23.3v-7.8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NoqTech">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5146e5"/>
+      <stop offset="1" stop-color="#2a2580"/>
+    </linearGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#fff4d6"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#dcd9ff"/>
+      <stop offset="1" stop-color="#b4aeff"/>
+    </linearGradient>
+    <linearGradient id="spill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff6dc" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#fff6dc" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="gloss" cx=".3" cy="0" r=".9">
+      <stop offset="0" stop-color="#fff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="sq"><rect width="64" height="64" rx="14.3"/></clipPath>
+  </defs>
+  <g clip-path="url(#sq)">
+    <rect width="64" height="64" fill="url(#bg)"/>
+    <rect width="64" height="64" fill="url(#gloss)"/>
+    <path d="M24 49L40 49L52 64L10 64Z" fill="url(#spill)"/>
+    <path d="M24 49V27a8 8 0 0 1 16 0V49Z" fill="url(#light)"/>
+    <path d="M24 26.5L16.5 22.5V53L24 49Z" fill="url(#leaf)"/>
+    <circle cx="19" cy="38.5" r="1.1" fill="#2a2580" opacity=".55"/>
   </g>
+  <rect x=".5" y=".5" width="63" height="63" rx="13.8" fill="none" stroke="#000" stroke-opacity=".12"/>
 </svg>
